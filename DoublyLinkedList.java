@@ -3,7 +3,6 @@ public class DoublyLinkedList {
   private Node head;
   private Node tail;
   
-     
  /**
    * Method to add element to the front of the list
    */
@@ -20,11 +19,36 @@ public class DoublyLinkedList {
    * Method to add element to the back of the list
    */
    public void addRear(String data){
-     //Create new node and make it as the head of the list
-     tail = new Node(data, null, tail);
-     //If head is equal to null, that means the list is empty
-     if(head == null) {
-       head = tail;
-     }
-     }
+    //Check if head is null, if so, create head
+    if(isEmpty()) {
+      head = new Node(data);
+      tail = head;
+    }else{
+    //if head is not null, add to the end of the list
+      tail.setNext(new Node(data, null, tail));
+      tail = tail.getNext();
     }
+  }
+   
+ /**
+   * Method to print out all items in the list
+   */
+  public void print() {
+    Node temp = head;
+    //print out nodes until we reach null
+    while(temp!= null)
+    {
+      System.out.print(temp.getData() + " ");
+      temp = temp.getNext();
+    }
+  }
+    
+ /**
+   * Method to see if head is empty
+   */
+  public boolean isEmpty() {
+    return head == null;
+  }
+
+}
+
