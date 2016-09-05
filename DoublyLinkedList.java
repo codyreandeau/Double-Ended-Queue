@@ -29,7 +29,24 @@ public class DoublyLinkedList {
       tail = tail.getNext();
     }
   }
+ 
+ /**
+   * Method to add element to the back of the list
+   */
+   public void removeRear(){
+     Node tmp = tail.getPrev();
+     tmp.setNext(null);
+     tail = tmp;
+    }
    
+ /**
+   * Method to add element to the back of the list
+   */
+   public void removeFront(){
+     Node tmp = head.getNext();
+     tmp.setPrev(null);
+     head = tmp;
+   }
  /**
    * Method to print out all items in the list
    */

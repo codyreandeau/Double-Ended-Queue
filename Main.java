@@ -11,6 +11,11 @@ public class Main {
     list.addRear("Mary");
     
     list.print();
+    System.out.println();
+    System.out.println("-------------------");
+    list.removeRear();
+    list.removeFront();
+    list.print();
     
   }
   
