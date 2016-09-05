@@ -34,6 +34,10 @@ public class DoublyLinkedList {
    * Method to add element to the back of the list
    */
    public void removeRear(){
+     if(isEmpty()) {
+       System.out.println("Cannot remove! list is Empty!");
+       return;
+     }
      Node tmp = tail.getPrev();
      tmp.setNext(null);
      tail = tmp;
@@ -43,6 +47,10 @@ public class DoublyLinkedList {
    * Method to add element to the back of the list
    */
    public void removeFront(){
+    if(isEmpty()) {
+       System.out.println("Cannot remove! list is Empty!");
+       return;
+     }
      Node tmp = head.getNext();
      tmp.setPrev(null);
      head = tmp;
