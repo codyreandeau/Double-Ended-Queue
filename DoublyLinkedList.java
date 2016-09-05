@@ -55,7 +55,7 @@ public class DoublyLinkedList {
     //print out nodes until we reach null
     while(temp!= null)
     {
-      System.out.print(temp.getData() + " ");
+      System.out.println(temp.getData() + " ");
       temp = temp.getNext();
     }
   }

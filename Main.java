@@ -11,9 +11,13 @@ public class Main {
     list.addRear("Mary");
     
     list.print();
-    System.out.println();
-    System.out.println("-------------------");
+   
+    System.out.println("-------------------------");
+    System.out.println("Remove some of the nodes:");
+    System.out.println("-------------------------");
+    
     list.removeRear();
+    list.removeFront();
     list.removeFront();
     list.print();
     
